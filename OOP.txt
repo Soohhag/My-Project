@@ -1,0 +1,110 @@
+2. what is class?
+-> Class is a collection of attributes/properties and methods
+-> Class is a collection of objects
+-> Technically, class is a user-defined datatype
+-> In python everything is object here below the example
+	(x=10 is int class) (y=[] is a list class)
+	print(type(x))
+	print(type(y))
+
+
+4. Constractruct and types of constractruat
+-> magic method print(student1.__dict__) akta object er modde ki ki ache seta dekhte pabo
+-> 3types of constructor
+	prameterized constructor
+	non-parameterized constructor
+	default constructor
+
+5. self variable
+-> self is a variable which contains memory rafarence of current object in heap memory
+example: student1 = Student(student1, name, age)
+
+
+7. built in class function for data
+-> getattr(object_name, attribute_name)
+-> setattr(object_name, attribute_name, new_value)
+-> delattr(object_name, attribute_name)
+-> hasattr(object_name, attribute_name)
+example: setattr(student1, 'name', 'sohagmia')
+print(student1.__dict__)
+
+8. built in class attributes
+-> __dict__:- Dictionary containing class namespace
+-> __doc__:- Class documentation string.
+-> __name__:- class Name
+-> __module__:- Module name in which class is defined
+-> __bases__:- List of base classes
+
+9. isinstance(student1, Student): True return korbe
+	if isinstance(student1, Student):
+		pass
+
+10. instance variable and instance method
+
+11. class variables
+-> Variables made for entire class(All objects)
+-> Only one copy is created and distributed to all objects
+-> Modification in class variable impact on all objects.
+	-> class mathod
+		@classmethod
+		def get_company_name(cls):
+			cls.company_name
+
+12. setter method and getter method
+
+13. types of method
+-> instance methods
+-> class methods
+-> static methods
+
+
+18. types of inheritence
+-> Single inheritance
+-> Multi-level inheritance
+-> Hierarchical inheritance
+-> Multiple inheritance
+-> Hybrid inheritance
+-> cyclic inheritance
+
+38. class base decorators
+2types of decorators
+*function base decorators
+*class base decorators
+python has 3 built in decorators
+* @classmethod
+* @staticmethod
+* @property
+class Decorators(object):
+	def __init__(self, func):
+		self.function = func
+	
+	def __call__(self, a, b):
+		result = self.function(a, b)
+		return result**2
+		
+
+@Decorators
+def add(a, b):
+	return a + b
+
+
+
+42. Abstraction - Interface
+# python er modde biult in Abstraction class ney kintu amra (abc) module er 
+maddome abstraction implementation korte pari.
+
+* A class which contains one or more abstract methods and concrete method
+* Abstract class must have at least one abstract method.
+* An abstract class can be considered as a blueprint for other class.
+
+Keep in mind:-
+* You can't instantiate abstract classes.
+* Abstract class requires at least one method abstract.
+* All abstract methods present in abstract class must be implemented in child classes.
+
+Uses of abstraction
+* when we have large code and functionaliies.
+* Your abstract class is like an API for other subclasses
+* used when a third party is going to provide implementations.
+* when we have different implementations for different objects for same component
+* for creating interfaces

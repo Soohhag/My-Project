@@ -1,0 +1,2 @@
+class er modde 2ta importent thing
+property an method
